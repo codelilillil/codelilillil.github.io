@@ -6,11 +6,20 @@
     <title>   </title>
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
     <script type="text/javascript">
-    	
+    	 if(navigator.userAgent.match(/MicroMessenger\//i)) { //微信 你加你的遮罩
+	  
+    } else if(navigator.userAgent.match(/QQ\//i)) {//QQ 你加你的遮罩 
+	
+    } else if(navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)) { //IOS 你应该是跳转
+       window.location.href = "https://gongyi.qq.com/"   
+    } else if (/(Android)/i.test(navigator.userAgent)) { //安卓 延时跳转
+
+    } else { //其他 比如PC
+         window.location.href = "https://gongyi.qq.com/"
+    } 
    		document.addEventListener('plusready', function(){
    			
    		});
-   		
     </script>
 </head>
 <div class="black">
